@@ -5,21 +5,21 @@
 class Eg < Formula
   desc "A per-shell environment profile switcher with batteries"
   homepage "https://github.com/stjbrown/env-garden"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.0/env-garden_0.1.0_darwin_amd64.tar.gz"
-      sha256 "20486900c3de6f7dc7117fd10b4bb7c6bede7b8c1ab43fa4a26c4781650e8530"
+      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.1/env-garden_0.1.1_darwin_amd64.tar.gz"
+      sha256 "be291834c51ea9024ab4ac68e59d224c7b9babdf8a02895c5d1c165ded70d4b5"
 
       define_method(:install) do
         bin.install "eg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.0/env-garden_0.1.0_darwin_arm64.tar.gz"
-      sha256 "82cc36764b565137fa798a62c5f9706d86dd730be563d4df6e5941be33f841ae"
+      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.1/env-garden_0.1.1_darwin_arm64.tar.gz"
+      sha256 "a18a6104936db3a80cba1db33f7eb40d48e8ef74487ec7a00e6068879a5363f4"
 
       define_method(:install) do
         bin.install "eg"
@@ -29,15 +29,15 @@ class Eg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.0/env-garden_0.1.0_linux_amd64.tar.gz"
-      sha256 "e9fd898ed5f354ba0908d4409e2024bc869a6991c4ac5001355ce16fdf919bcf"
+      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.1/env-garden_0.1.1_linux_amd64.tar.gz"
+      sha256 "8c39109f77592d75dfcf8c63261b7d594e7ba69f3c0286a78b94c373e921d1b8"
       define_method(:install) do
         bin.install "eg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.0/env-garden_0.1.0_linux_arm64.tar.gz"
-      sha256 "82a8867567ec80271f99281131e925168a2752b7fd9368b9c805b791d9610ea5"
+      url "https://github.com/stjbrown/env-garden/releases/download/v0.1.1/env-garden_0.1.1_linux_arm64.tar.gz"
+      sha256 "2cd966562904e34ca24ac61d39f2d0f885479586d79700a24f8359a5d4742410"
       define_method(:install) do
         bin.install "eg"
       end
